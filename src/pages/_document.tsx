@@ -1,6 +1,7 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from 'next/document'
 
-export default function Document() {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export default function Document () {
   return (
     <Html lang="en">
       <Head />
@@ -9,5 +10,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }

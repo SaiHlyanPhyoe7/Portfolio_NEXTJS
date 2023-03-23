@@ -1,4 +1,9 @@
 {
+  "singleQuote": true,
+  "requirePragma": true,
+  "insertPragma": true,
+  "useTabs": true,
+  "quoteProps": "consistent",
   "endOfLine": "lf",
   "printWidth": 80,
   "tabWidth": 2,
