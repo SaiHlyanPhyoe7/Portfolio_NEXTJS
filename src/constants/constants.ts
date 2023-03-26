@@ -1,0 +1,2 @@
+export const quote =
+  "IF THE PLAN DOESN'T WORK, CHANGE THE PLAN, BUT NEVER THE GOAL!"

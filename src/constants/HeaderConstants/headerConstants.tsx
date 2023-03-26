@@ -20,3 +20,6 @@ export const NavData = [
     name: 'CONTACT'
   }
 ]
+
+export const headerQuote =
+  'THE ONLY WAY TO DO GREAT WORK IS TO LOVE WHAT YOU DO!'
