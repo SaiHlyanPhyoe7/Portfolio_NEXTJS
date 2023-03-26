@@ -7,7 +7,7 @@ export function LayoutHeader() {
   const router = useRouter()
 
   return (
-    <Box className="text-[#ccc5b9">
+    <Box className="text-[#ccc5b9] py-2">
       <Box className="cursor-pointer">
         <Flex justify="space-between" align="center" mx="xl" px="xl">
           <Box>
@@ -26,9 +26,9 @@ export function LayoutHeader() {
                   href={nav.pathname}
                   className={`${
                     router.pathname === nav.pathname
-                      ? 'text-orange-300 border-b border-b-orange-300'
-                      : ''
-                  } hover:border-b hover:border-b-orange-300`}
+                      ? 'text-[#f7e736] border-b border-b-[#f7e736]'
+                      : 'text-[#fffcf2]'
+                  } hover:border-b hover:border-b-[#ed6d3c]`}
                 >
                   {nav.name}
                 </Link>
@@ -37,8 +37,8 @@ export function LayoutHeader() {
           </Flex>
           <Box>
             <Text
-              c="#fffcf2"
-              className="hover:border-b hover:border-b-orange-300"
+              c="#f7e736"
+              className="hover:border-b hover:border-b-[#ed6d3c]"
             >
               DOWNLOAD CV
             </Text>

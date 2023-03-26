@@ -10,7 +10,7 @@ export function Layout({ children }: TChild) {
         <LayoutHeader />
       </Box>
       <Box className="flex">
-        <Box className="w-[4.5rem] h-screen bg-green-300">
+        <Box className="w-[3rem] h-screen">
           <LayoutSidebar />
         </Box>
         <Box className="">
