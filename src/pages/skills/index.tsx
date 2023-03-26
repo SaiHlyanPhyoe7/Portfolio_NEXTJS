@@ -1,5 +1,9 @@
-import { Text } from '@mantine/core'
+import { Box, Text } from '@mantine/core'
 
-export function Page() {
-  return <Text>I am from skills</Text>
+export default function Page() {
+  return (
+    <Box className="bg-green-400">
+      <Text className="bg-emerald-300">I am Skills</Text>
+    </Box>
+  )
 }

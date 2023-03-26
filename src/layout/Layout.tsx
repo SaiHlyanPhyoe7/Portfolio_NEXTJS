@@ -1,11 +1,7 @@
 import { LayoutHeader } from '@/components/Header/LayoutHeader'
 import { LayoutSidebar } from '@/components/Sidebar/LayoutSidebar'
+import { type TChild } from '@/types/types'
 import { Box } from '@mantine/core'
-
-// Delcare Types
-interface TChild {
-  children: React.ReactNode
-}
 
 export function Layout({ children }: TChild) {
   return (

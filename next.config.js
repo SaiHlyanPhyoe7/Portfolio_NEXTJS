@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  plugins: [require('tailwindcss'), require('postcss')]
+  reactStrictMode: true
 }
 
 module.exports = nextConfig
