@@ -154,24 +154,24 @@ export default function Page() {
             <Text>UI UX Designer</Text>
             <UiUxLottfile />
             <Text className="w-[300px] text-start">
-              As a Back-end developers, I focus on creating the server-side
-              functionality that powers websites and web applications. I work
-              mainly with nodeJs, ExpressJs and NestJs to build databases, APIs,
-              and other back-end components that interact with the front-end. I
-              also make ensure that websites are secure, scalable, and
-              performance.
-            </Text>
-          </Box>
-          <Box className="rounded-md border p-8 border-white">
-            <Text>Backend Developer</Text>
-            <BackendLottifile />
-            <Text className="w-[300px] text-start">
               As a UI/UX designers,I focus on creating interfaces that meet user
               needs while also delivering business value. I also work to ensure
               that the design is implemented correctly and delivers a seamless
               experience across all devices. My goal is to create interfaces
               that are intuitive, visually pleasing, and improve user
               engagement.
+            </Text>
+          </Box>
+          <Box className="rounded-md border p-8 border-white">
+            <Text>Backend Developer</Text>
+            <BackendLottifile />
+            <Text className="w-[300px] text-start">
+              As a Back-end developers, I focus on creating the server-side
+              functionality that powers websites and web applications. I work
+              mainly with nodeJs, ExpressJs and NestJs to build databases, APIs,
+              and other back-end components that interact with the front-end. I
+              also make ensure that websites are secure, scalable, and
+              performance.
             </Text>
           </Box>
         </Flex>
