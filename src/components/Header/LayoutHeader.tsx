@@ -1,47 +1,54 @@
-import { Box, Flex, Text } from '@mantine/core'
+import { Box, Flex, Stepper, Text, Tooltip } from '@mantine/core'
+import { IconBrandGithubFilled, IconCircleCheck } from '@tabler/icons-react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { NavData } from './HeaderConstants/headerConstants'
+import { useState } from 'react'
+import { ToogleNavbarDrawer } from '../Drawer/ToogleNavbarDrawer'
 
 export function LayoutHeader() {
-  const router = useRouter()
-
+  const [active, setActive] = useState(0)
   return (
-    <Box className="text-[#ccc5b9] py-2">
-      <Box className="cursor-pointer">
+    <Box className="text-[#ccc5b9] py-4 bg-[#1d1e30]">
+      <Box
+        className="cursor-pointer"
+        style={{ boxShadow: '#f5f5f755 0px 5px 5px' }}
+      >
         <Flex justify="space-between" align="center" mx="xl" px="xl">
           <Box>
-            <Text className="text-md font-bold text-white">
+            <Text className="ml-12 text-md font-bold text-white">
               SAI_HLYAN_PHYOE/
-              <span className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300">
+              <button className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300">
                 FULLSTACK_DEVELOPER
-              </span>
+              </button>
             </Text>
           </Box>
-          <Flex gap="xl" justify="end" align="center" c="#fffcf2">
-            {NavData?.map((nav) => {
-              return (
-                <Link
-                  key={nav.pathname}
-                  href={nav.pathname}
-                  className={`${
-                    router.pathname === nav.pathname
-                      ? 'text-[#f7e736] border-b border-b-[#f7e736]'
-                      : 'text-[#fffcf2]'
-                  } hover:border-b hover:border-b-[#ed6d3c]`}
-                >
-                  {nav.name}
-                </Link>
-              )
-            })}
-          </Flex>
+          <Tooltip className="hidden lg:block" label=<Text>Click Me</Text>>
+            <Link href={'https://github.com/SaiHlyanPhyoe7?tab=repositories'}>
+              <Stepper
+                active={active}
+                onStepClick={setActive}
+                allowNextStepsSelect={false}
+                completedIcon={<IconCircleCheck />}
+                // iconSize={50}
+              >
+                <Stepper.Step
+                  icon={
+                    <IconBrandGithubFilled
+                      className="h-3/5 w-3/5"
+                      size="1.1rem"
+                    />
+                  }
+                  label=<Text className="text-white">my Github</Text>
+                  description=<Text className="hover:underline hover:underline-offset-4 text-white hover:text-blue-400">
+                    SaiHlyanPhyoe7
+                  </Text>
+                />
+              </Stepper>
+            </Link>
+          </Tooltip>
+
+          {/* Toogler Navbar */}
           <Box>
-            <Text
-              c="#f7e736"
-              className="hover:border-b hover:border-b-[#ed6d3c]"
-            >
-              DOWNLOAD CV
-            </Text>
+            <ToogleNavbarDrawer />
           </Box>
         </Flex>
       </Box>

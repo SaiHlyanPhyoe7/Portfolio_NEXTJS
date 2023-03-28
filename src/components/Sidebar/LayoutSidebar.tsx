@@ -1,19 +1,16 @@
+import { quote } from '@/constants/constants'
 import { Box } from '@mantine/core'
-import useRealtimeDateTime from '@/hook/useRealtimeDateTime'
 
 export function LayoutSidebar() {
-  const dateTime = useRealtimeDateTime()
-  const formattedDateTime = dateTime.format('DD/MM/YYYY HH:mm:ss')
-
   return (
-    <Box h="90%" className="rounded-3xl">
+    <Box className="rounded-3xl h-full relative">
       <Box
         c="#f1ed7e"
-        className="h-[30%] border-r absolute bottom-[23rem] rounded-full p-7 border-blue-400"
+        className="h-full border-r absolute rounded-full p-7 border-blue-400"
       />
-      <span className="text-white absolute -rotate-90 -left-16 top-[28rem] cursor-help">
-        {formattedDateTime}
-      </span>
+      <Box className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-[#f7e736] w-[600px] -rotate-90 cursor-help absolute -left-[17rem] top-[20.8rem]">
+        {quote}
+      </Box>
     </Box>
   )
 }

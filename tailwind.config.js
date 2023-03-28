@@ -10,9 +10,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['JetBrains Mono', 'monospace']
+      sans: ['JetBrains Mono', 'monospace'],
+      plaster: ['Lilita One', 'cursive']
     },
-    extend: {}
+    extend: {
+      colors: {
+        white: '#f5f5f7'
+      }
+    }
   },
   plugins: []
 }
