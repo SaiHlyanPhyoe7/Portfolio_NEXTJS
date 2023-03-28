@@ -29,6 +29,7 @@ export function Layout({ children }: TChild) {
                 onClick={() => {
                   scrollTo({ y: 0 })
                 }}
+                className="!font-sans"
               >
                 Scroll to top
               </Button>

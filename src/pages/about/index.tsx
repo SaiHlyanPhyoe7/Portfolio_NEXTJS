@@ -1,4 +1,4 @@
-import Velocity from '@/pages/TestVelocityCompo/Velocity'
+import Velocity from '@/components/TestVelocityCompo/Velocity'
 import { Box } from '@mantine/core'
 
 export default function Page() {

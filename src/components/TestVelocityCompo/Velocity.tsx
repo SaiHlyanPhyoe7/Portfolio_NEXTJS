@@ -1,4 +1,3 @@
-import './styles.module.css'
 import { useRef } from 'react'
 import {
   motion,
@@ -10,9 +9,10 @@ import {
   useAnimationFrame
 } from 'framer-motion'
 import { wrap } from '@motionone/utils'
+import { Text } from '@mantine/core'
 
 interface ParallaxProps {
-  children: string
+  children: React.ReactNode
   baseVelocity: number
 }
 
@@ -76,8 +76,16 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 export default function Velocity() {
   return (
     <section>
-      <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
-      <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
+      <ParallaxText baseVelocity={-3}>
+        <Text className="leading-[0.8] text-[5rem] font-light text-white tracking-tighter font-plaster">
+          Dream is not the thing you see in sleep.
+        </Text>
+      </ParallaxText>
+      <ParallaxText baseVelocity={3}>
+        <Text className="leading-[0.8] text-[5rem] font-light text-white tracking-tighter font-plaster">
+          But is that thing that doesn&apos;t let you sleep.
+        </Text>
+      </ParallaxText>
     </section>
   )
 }

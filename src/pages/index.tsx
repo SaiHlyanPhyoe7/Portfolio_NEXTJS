@@ -1,7 +1,11 @@
+import { BackendLottifile } from '@/assets/lottfiles/backend/BackendLottifile'
+import { FrontEndLottfile } from '@/assets/lottfiles/frontend/FrontEndLottfile'
 import { PencilCompo } from '@/assets/lottfiles/pencil/PencilCompo'
+import { UiUxLottfile } from '@/assets/lottfiles/uiux/UiUxLottfile'
 import { pencil, personality } from '@/constants/HomeConstants/homeConstants'
 import { Box, Divider, Flex, Text, Title, Tooltip } from '@mantine/core'
 import Link from 'next/link'
+import Velocity from '../components/TestVelocityCompo/Velocity'
 
 export default function Page() {
   return (
@@ -105,16 +109,72 @@ export default function Page() {
       </Box>
 
       {/* Fourth Section */}
-      <Box className="w-full h-full">
+      <Box className="w-full h-fit">
         <Box className="grid grid-cols-12">
           {pencil.map((pencil) => {
             return (
-              <Box key={pencil} className="col-span-1">
+              <Box key={pencil} className="col-span-4">
                 <PencilCompo />
               </Box>
             )
           })}
         </Box>
+      </Box>
+
+      {/* Fifth Section */}
+      <Box className="h-10vh">
+        <Velocity />
+      </Box>
+
+      {/* Sixth Section */}
+      <Box>
+        <Box>
+          <Text className="text-[4rem] text-gray-400 text-start">
+            What Can i DO?
+          </Text>
+          <Text className="pl-[5rem] text-[2rem] text-start text-gray-600">
+            Design is not just what it looks like and feels like. Design is how
+            it works.
+          </Text>
+        </Box>
+        <Text className="py-[8rem]">I am a...</Text>
+        <Flex justify="space-evenly" pb="1000px" align="start">
+          <Box className="rounded-md border p-8 border-white">
+            <Text>Frontend Developer</Text>
+            <FrontEndLottfile />
+            <Text className="w-[300px] text-start" fz="md">
+              As a Front-end developers, I take responsible for creating the
+              user-facing side of websites and web applications. I work mainly
+              with React, Tailwind,Redux and other necessary tools to build
+              responsive designs that look great on any device. I also make sure
+              that websites are fast, accessible, and user-friendly.
+            </Text>
+          </Box>
+          <Box className="rounded-md border p-8 border-white">
+            <Text>UI UX Designer</Text>
+            <UiUxLottfile />
+            <Text className="w-[300px] text-start">
+              As a Back-end developers, I focus on creating the server-side
+              functionality that powers websites and web applications. I work
+              mainly with nodeJs, ExpressJs and NestJs to build databases, APIs,
+              and other back-end components that interact with the front-end. I
+              also make ensure that websites are secure, scalable, and
+              performance.
+            </Text>
+          </Box>
+          <Box className="rounded-md border p-8 border-white">
+            <Text>Backend Developer</Text>
+            <BackendLottifile />
+            <Text className="w-[300px] text-start">
+              As a UI/UX designers,I focus on creating interfaces that meet user
+              needs while also delivering business value. I also work to ensure
+              that the design is implemented correctly and delivers a seamless
+              experience across all devices. My goal is to create interfaces
+              that are intuitive, visually pleasing, and improve user
+              engagement.
+            </Text>
+          </Box>
+        </Flex>
       </Box>
     </Box>
   )
