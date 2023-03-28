@@ -1,4 +1,4 @@
-import { useDisclosure } from '@mantine/hooks'
+import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import { Box, Drawer, Flex, Group, Text } from '@mantine/core'
 import { useState } from 'react'
 import { NavData } from '../../constants/HeaderConstants/headerConstants'
@@ -9,46 +9,52 @@ export function ToogleNavbarDrawer() {
   const [opened, { open, close }] = useDisclosure(false)
   const [navToggle, setNavToggle] = useState(false)
   const router = useRouter()
+  const matches = useMediaQuery('(min-width: 1024px)')
 
   return (
     <>
       <Drawer
         position="right"
-        size="40%"
+        size={matches ? '50%' : '80%'}
         opened={opened}
         onClose={() => {
           setNavToggle(false)
           close()
         }}
-        title="Explorer mine"
+        className="h-full"
+        title=<Text className="lg:block hidden">Explorer mine</Text>
         overlayProps={{ opacity: 0.5, blur: 2 }}
       >
         {/* Drawer content */}
         <Flex
-          m="5rem"
+          className="m-0 lg:m-[5rem]"
           direction="column"
           gap="xl"
-          justify="start"
-          align="start"
+          h="60vh"
+          justify={matches ? 'start' : 'center'}
+          align={matches ? 'start' : 'center'}
           c="#fffcf2"
-          className="hidden lg:flex"
         >
           {NavData?.map((nav) => {
             return (
               <Link
+                key={nav.name}
                 onClick={() => {
                   setNavToggle(false)
                   close()
                 }}
-                key={nav.pathname}
                 href={nav.pathname}
-                className={`${
-                  router.pathname === nav.pathname
-                    ? 'text-[#f7e736] border-b border-b-[#f7e736]'
-                    : 'text-[#fffcf2]'
-                } hover:border-b hover:border-b-[#ed6d3c]`}
               >
-                <Text align="center">{nav.name}</Text>
+                <Text
+                  className={`${
+                    router.pathname === nav.pathname
+                      ? 'text-[#f7e736] border-b border-b-[#f7e736]'
+                      : 'text-[#fffcf2]'
+                  } hover:border-b hover:border-b-[#ed6d3c]`}
+                  align="center"
+                >
+                  {nav.name}
+                </Text>
               </Link>
             )
           })}
@@ -65,15 +71,15 @@ export function ToogleNavbarDrawer() {
         </Box>
       </Drawer>
 
-      <Group position="center">
-        <div
+      <Group position="center" className="lg:ml-0 ml-10">
+        <button
           onClick={() => {
             setTimeout(() => {
               open()
             }, 800)
             setNavToggle(!navToggle)
           }}
-          className="toggle overflow-hidden flex justify-center items-center relative w-[70px] h-[70px] shadow-sm hover:shadow-lg cursor-pointer rounded-lg hover:opacity-[0.9]"
+          className="toggle overflow-hidden flex justify-center items-center relative w-[70px] h-[70px] shadow-sm hover:shadow-xl duration-300 cursor-pointer rounded-lg hover:opacity-[0.9]"
         >
           {/* w42 h4 w25 * w40 h4 * w42 h4 w15 25  */}
           <span
@@ -100,7 +106,7 @@ export function ToogleNavbarDrawer() {
               : 'w-[15px] translate-y-[15px]'
           }`}
           ></span>
-        </div>
+        </button>
       </Group>
     </>
   )

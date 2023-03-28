@@ -12,7 +12,11 @@ module.exports = {
     fontFamily: {
       sans: ['JetBrains Mono', 'monospace']
     },
-    extend: {}
+    extend: {
+      colors: {
+        white: '#f5f5f7'
+      }
+    }
   },
   plugins: []
 }

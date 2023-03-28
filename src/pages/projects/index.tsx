@@ -1,9 +1,13 @@
-import { Box, Text } from '@mantine/core'
+import { Box, Flex, Text } from '@mantine/core'
 
 export default function Page() {
   return (
-    <Box className="bg-green-400 ml-12">
-      <Text className="bg-emerald-300">I am About</Text>
+    <Box className="text-white w-screen h-[80vh] ml-40">
+      <Flex justify="center" align="start" className="w-full h-full mt-36">
+        <Text className="text-[48px] font-semibold">
+          I am Mr.Sai Hlyan Phyoe
+        </Text>
+      </Flex>
     </Box>
   )
 }

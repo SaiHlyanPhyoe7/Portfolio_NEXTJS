@@ -22,7 +22,9 @@
     "@mantine/notifications": "^6.0.4",
     "@mantine/nprogress": "^6.0.4",
     "@mantine/spotlight": "^6.0.4",
+    "@motionone/utils": "^10.15.1",
     "@next/font": "^13.2.4",
+    "@react-spring/web": "^9.7.1",
     "@tabler/icons-react": "^2.11.0",
     "@types/node": "18.15.5",
     "@types/react": "18.0.28",
@@ -32,9 +34,12 @@
     "eslint-config-next": "13.2.4",
     "eslint-plugin-unused-imports": "^2.0.0",
     "framer-motion": "^10.9.1",
+    "lottie-react": "^2.4.0",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-animated-cursor": "^2.5.2",
+    "react-dom": "18.2.0",
+    "react-use-measure": "^2.1.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.56.0",

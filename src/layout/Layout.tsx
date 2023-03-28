@@ -9,15 +9,15 @@ export function Layout({ children }: TChild) {
   const [scroll, scrollTo] = useWindowScroll()
 
   return (
-    <Box className="bg-[#252422]">
-      <Box className="sticky top-0 left-0">
+    <Box className="h-[85vh]">
+      <Box className="sticky top-0 left-0 z-50">
         <LayoutHeader />
       </Box>
       <Box className="flex">
-        <Box className="w-[3rem] h-screen">
+        <Box className="w-[3rem] h-[43.5rem] z-10">
           <LayoutSidebar />
         </Box>
-        <Box className="">
+        <Box className="h-full w-full">
           <main>{children}</main>
         </Box>
         <Affix position={{ bottom: rem(20), right: rem(20) }}>

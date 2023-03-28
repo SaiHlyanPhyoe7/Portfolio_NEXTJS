@@ -1,9 +1,10 @@
-import { Box, Text } from '@mantine/core'
+import Velocity from '@/pages/TestVelocityCompo/Velocity'
+import { Box } from '@mantine/core'
 
 export default function Page() {
   return (
-    <Box className="bg-green-400 ml-12">
-      <Text className="bg-emerald-300">I am About</Text>
+    <Box className="text-white w-screen h-[80vh] ml-40">
+      <Velocity />
     </Box>
   )
 }
