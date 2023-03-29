@@ -14,7 +14,7 @@ export function Layout({ children }: TChild) {
         <LayoutHeader />
       </Box>
       <Box className="flex">
-        <Box className="w-[3rem] h-[43.5rem] z-10">
+        <Box className="hidden lg:block w-[3rem] h-[43.5rem] z-10">
           <LayoutSidebar />
         </Box>
         <Box className="h-full w-full">
@@ -29,7 +29,6 @@ export function Layout({ children }: TChild) {
                 onClick={() => {
                   scrollTo({ y: 0 })
                 }}
-                className="!font-sans"
               >
                 Scroll to top
               </Button>

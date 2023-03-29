@@ -1,21 +1,20 @@
-import { BackendLottifile } from '@/assets/lottfiles/backend/BackendLottifile'
-import { FrontEndLottfile } from '@/assets/lottfiles/frontend/FrontEndLottfile'
 import { PencilCompo } from '@/assets/lottfiles/pencil/PencilCompo'
-import { UiUxLottfile } from '@/assets/lottfiles/uiux/UiUxLottfile'
+import { LWIcon, wcid } from '@/constants/HeaderConstants/headerConstants'
 import { pencil, personality } from '@/constants/HomeConstants/homeConstants'
 import { Box, Divider, Flex, Text, Title, Tooltip } from '@mantine/core'
 import Link from 'next/link'
 import Velocity from '../components/TestVelocityCompo/Velocity'
+import { motion } from 'framer-motion'
 
 export default function Page() {
   return (
-    <Box className="text-white h-screen w-full pl-14 text-center space-y-28">
+    <Box className="text-white h-screen w-full lg:pl-14 text-center space-y-8 lg:space-y-28 px-8">
       {/* First Section */}
       <Flex
         direction="column"
         justify="start"
         align="center"
-        className="w-full h-[60vh] pt-60 hidden lg:block border-b border-blue-400 rounded-full"
+        className="w-full lg:h-[60vh] pt-14 lg:pt-60 block border-b border-blue-400 rounded-full"
       >
         <Flex justify="center" align="center" gap="xl">
           <Text className="text-[48px] font-semibold">Who Am</Text>
@@ -56,7 +55,7 @@ export default function Page() {
           direction="column"
           justify="start"
           align="center"
-          className="hidden lg:block"
+          className="block"
         >
           <Text mb="xl" className="text-start text-gray-400 text-2xl">
             What Can I Bring To the Table?
@@ -65,7 +64,7 @@ export default function Page() {
 
           <Box className="grid grid-cols-12">
             <Box className="col-span-1 my-auto">
-              <Text className="text-[36px] break-words w-[10px] text-blue-400">
+              <Text className="text-[25px] lg:text-[36px] break-words w-[10px] text-blue-400">
                 Personality
               </Text>
             </Box>
@@ -73,14 +72,14 @@ export default function Page() {
               {personality.map((personality) => {
                 return (
                   <Box key={personality.name}>
-                    <Box className="grid text-start my-24 grid-cols-12">
+                    <Box className="grid text-start my-4 lg:my-24 grid-cols-12">
                       <Box className="col-span-8 my-auto">
-                        <Text fz="xl" className="text-gray-400">
+                        <Text className="lg:text-sm lg:text[1.2rem] text-gray-400">
                           {personality.desc}
                         </Text>
                       </Box>
                       <Box className="col-span-3">
-                        <Title className="text-[56px]">
+                        <Title className="text-[25px] lg:text-[56px]">
                           {personality.name}
                         </Title>
                       </Box>
@@ -95,21 +94,15 @@ export default function Page() {
       </Box>
 
       {/* Third Section */}
-      <Box className="pt-14 h-[60%] w-full">
-        <Flex
-          direction="column"
-          justify="start"
-          align="center"
-          className="hidden lg:block border border-blue-400"
-        >
-          <Text className="text-[#ec9033] text-center text-[10rem]">
-            Think Outside the SQUARE Space
-          </Text>
-        </Flex>
+      <Box className="relative pt-0 lg:py-14 lg:h-[60%] w-full">
+        <span className="absolute top-0 w-40 lg:h-[580px] lg:w-[830px] h-20 border border-blue-400"></span>
+        <Text className="text-[#ec9033] text-center text-[25px] lg:text-[10rem]">
+          Think Outside the SQUARE Space
+        </Text>
       </Box>
 
       {/* Fourth Section */}
-      <Box className="w-full h-fit">
+      <Box className="w-full h-fit lg:pt-14">
         <Box className="grid grid-cols-12">
           {pencil.map((pencil) => {
             return (
@@ -127,54 +120,72 @@ export default function Page() {
       </Box>
 
       {/* Sixth Section */}
-      <Box>
+      <Box className="">
         <Box>
-          <Text className="text-[4rem] text-gray-400 text-start">
+          <Text className="text-[30px] lg:text-[50px] text-gray-400 text-start">
             What Can i DO?
           </Text>
-          <Text className="pl-[5rem] text-[2rem] text-start text-gray-600">
+          <Text className="lg:pl-[5rem] text-sm lg:text-[2rem] text-start text-gray-600">
             Design is not just what it looks like and feels like. Design is how
             it works.
           </Text>
         </Box>
-        <Text className="py-[8rem]">I am a...</Text>
-        <Flex justify="space-evenly" pb="1000px" align="start">
-          <Box className="rounded-md border p-8 border-white">
-            <Text>Frontend Developer</Text>
-            <FrontEndLottfile />
-            <Text className="w-[300px] text-start" fz="md">
-              As a Front-end developers, I take responsible for creating the
-              user-facing side of websites and web applications. I work mainly
-              with React, Tailwind,Redux and other necessary tools to build
-              responsive designs that look great on any device. I also make sure
-              that websites are fast, accessible, and user-friendly.
-            </Text>
-          </Box>
-          <Box className="rounded-md border p-8 border-white">
-            <Text>UI UX Designer</Text>
-            <UiUxLottfile />
-            <Text className="w-[300px] text-start">
-              As a UI/UX designers,I focus on creating interfaces that meet user
-              needs while also delivering business value. I also work to ensure
-              that the design is implemented correctly and delivers a seamless
-              experience across all devices. My goal is to create interfaces
-              that are intuitive, visually pleasing, and improve user
-              engagement.
-            </Text>
-          </Box>
-          <Box className="rounded-md border p-8 border-white">
-            <Text>Backend Developer</Text>
-            <BackendLottifile />
-            <Text className="w-[300px] text-start">
-              As a Back-end developers, I focus on creating the server-side
-              functionality that powers websites and web applications. I work
-              mainly with nodeJs, ExpressJs and NestJs to build databases, APIs,
-              and other back-end components that interact with the front-end. I
-              also make ensure that websites are secure, scalable, and
-              performance.
-            </Text>
-          </Box>
-        </Flex>
+        <Text className="py-20 lg:py-[8rem] text-[#ec9033]">I am a...</Text>
+        <Box className="grid grid-cols-12 space-y-8 lg:space-y-0 space-x-3 pb-[100px] lg:pb-0">
+          {wcid.map((data) => {
+            return (
+              <Box
+                key={data.name}
+                className="rounded-md border p-8 col-span-12 lg:col-span-4 border-white"
+              >
+                <Text className="my-12">{data.name}</Text>
+                {data.icon}
+                <Text className="lg:w-[300px] text-center w-full" fz="md">
+                  {data.desc}
+                </Text>
+              </Box>
+            )
+          })}
+        </Box>
+      </Box>
+
+      {/* Seventh Section */}
+      <Box h="200px" className="text-start hidden lg:block">
+        <Box className="grid grid-cols-12">
+          <Box className="hidden lg:grid col-span-4"></Box>
+          <motion.div>
+            <div className="text-center h-full w-full col-span-12 lg:col-span-2">
+              <Flex align="end" className="h-full ">
+                GOTO :
+              </Flex>
+            </div>
+          </motion.div>
+          <Flex className="col-span-6 lg:gap-8">
+            {LWIcon.map((data) => {
+              return (
+                <Tooltip key={data.name} label="Click me  or Drag me">
+                  <Link href={data.link} className="mt-6 hover:text-blue-400">
+                    <motion.p
+                      drag
+                      dragConstraints={{
+                        top: -50,
+                        left: -50,
+                        right: 50,
+                        bottom: 50
+                      }}
+                      dragElastic
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      {data.icon}
+                      {data.name}
+                    </motion.p>
+                  </Link>
+                </Tooltip>
+              )
+            })}
+          </Flex>
+        </Box>
       </Box>
     </Box>
   )
