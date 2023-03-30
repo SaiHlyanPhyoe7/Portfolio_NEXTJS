@@ -14,7 +14,7 @@ import {
 
 export const NavData = [
   {
-    pathname: '/home',
+    pathname: '/',
     name: 'HOME'
   },
   {
@@ -76,7 +76,7 @@ export const navStepper = [
 
 export const LWIcon = [
   {
-    link: '/home',
+    link: '/',
     icon: <IconHome className="w-full" />,
     name: 'Home'
   },

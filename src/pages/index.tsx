@@ -3,7 +3,7 @@ import { LWIcon, wcid } from '@/constants/HeaderConstants/headerConstants'
 import { pencil, personality } from '@/constants/HomeConstants/homeConstants'
 import { Box, Divider, Flex, Text, Title, Tooltip } from '@mantine/core'
 import Link from 'next/link'
-import Velocity from '../components/TestVelocityCompo/Velocity'
+import Velocity from '../components/Animation/TestVelocityCompo/Velocity'
 import { motion } from 'framer-motion'
 
 export default function Page() {
@@ -140,7 +140,10 @@ export default function Page() {
               >
                 <Text className="my-12">{data.name}</Text>
                 {data.icon}
-                <Text className="lg:w-[300px] text-center w-full" fz="md">
+                <Text
+                  className="lg:w-[300px] text-center w-full m-auto"
+                  fz="md"
+                >
                   {data.desc}
                 </Text>
               </Box>
