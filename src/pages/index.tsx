@@ -20,7 +20,7 @@ export default function Page() {
           <Text className="text-[48px] font-semibold">Who Am</Text>
           <Tooltip label="Sai Hlyan Phyoe">
             <Flex justify="space-between" align="center">
-              <Text className="text-[48px] text-[#ec9033] font-semibold underline underline-offset-4">
+              <Text className="text-[48px] text-[#ec9033] font-semibold">
                 I
               </Text>
               <Text className="text-[48px] font-semibold">?</Text>
@@ -41,7 +41,7 @@ export default function Page() {
           <Tooltip label="Let's Explore More..">
             <Link
               href="/about"
-              className="underline underline-offset-4 hover:text-blue-800"
+              className="underline underline-offset-4 text-green-400"
             >
               &nbsp;/about
             </Link>

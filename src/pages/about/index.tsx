@@ -4,6 +4,8 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Image from 'next/image'
 import img from '../../assets/img/rembg_photo.png'
 import imgProgrammer from '../../assets/img/imgAboutSvgProgrammer.jpg'
+import engineering from '../../assets/img/engineering.jpg'
+import motivation from '../../assets/img/motivation.jpg'
 import Link from 'next/link'
 
 export default function Page() {
@@ -12,7 +14,7 @@ export default function Page() {
   return (
     <Box className="text-white h-full w-full text-center space-y-8 lg:space-y-28">
       <Box>
-        <Parallax pages={5} className="">
+        <Parallax pages={4.2} className="">
           <ParallaxLayer offset={0} speed={0.5} className="">
             <Box className="">
               <Box className="flex flex-col w-full h-[80vh] space-y-8 items-center justify-center text-[25px] lg:text-[50px]">
@@ -42,7 +44,7 @@ export default function Page() {
             </Box>
           </ParallaxLayer>
           <ParallaxLayer
-            sticky={{ start: 1, end: 3 }}
+            sticky={{ start: 1, end: 4 }}
             style={{
               ...alignCenter,
               justifyContent: 'flex-start'
@@ -111,9 +113,9 @@ export default function Page() {
             <div className="w-[95%] lg:w-[55%] text-start">
               <Box className="w-[100%] lg:w-[70%] space-y-4 lg:space-y-12 text-start text-[10px] lg:text-xl">
                 <Image
-                  src={imgProgrammer}
+                  src={motivation}
                   className="h-fit block lg:hidden"
-                  alt="programmer"
+                  alt="motivation"
                 />
                 <Text>
                   As you know My name is Ryan, Other than Programming ,I have a
@@ -121,6 +123,10 @@ export default function Page() {
                   developers.
                 </Text>
                 <Text>I am very positive.I love being at work.</Text>
+                <Text>
+                  I&apos;m happy working on my own but i also like to work as
+                  part of a team{' '}
+                </Text>
                 <Text>
                   I have goals outside of work which mean i need to perform to
                   high standard in my job in order to achieve those goals
@@ -131,6 +137,7 @@ export default function Page() {
             </div>
           </ParallaxLayer>
           <ParallaxLayer
+            className=""
             offset={3.5}
             speed={1.5}
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
@@ -138,11 +145,10 @@ export default function Page() {
             <div className="w-[95%] lg:w-[55%] text-start">
               <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[10px] lg:text-xl">
                 <Image
-                  src={imgProgrammer}
+                  src={engineering}
                   className="h-fit block lg:hidden"
-                  alt="programmer"
+                  alt="engineering"
                 />
-
                 <Text>
                   I also coming from a circuit engineering background.
                 </Text>
@@ -162,8 +168,11 @@ export default function Page() {
                   that are responsive, good looking and performance.
                 </Text>
                 <Tooltip label="goto project page">
-                  <Text className="my-12 ">
-                    <Link href="/projects" className="text-blue-700 underline">
+                  <Text className="my-12">
+                    <Link
+                      href="/projects"
+                      className="text-blue-700 underline cursor-pointer"
+                    >
                       Click Here
                     </Link>{' '}
                     To View All of my Projects
