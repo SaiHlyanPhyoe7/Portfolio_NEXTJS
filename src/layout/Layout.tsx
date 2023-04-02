@@ -16,7 +16,7 @@ export function Layout({ children }: TChild) {
         <LayoutHeader />
       </Box>
       <Box className="flex">
-        <Box className={`${router.pathname === '/' ? 'block' : 'hidden'}`}>
+        <Box className={`${router.pathname === '/' ? 'fixed' : 'hidden'}`}>
           <Box className="hidden lg:block w-[3rem] h-[43.5rem] z-10">
             <LayoutSidebar />
           </Box>

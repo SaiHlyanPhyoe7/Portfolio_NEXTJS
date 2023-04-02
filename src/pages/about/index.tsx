@@ -32,7 +32,7 @@ export default function Page() {
                       .start()
                   }}
                 />
-                <Title className="text-gray-600 text-[30px]" align="start">
+                <Title className="text-gray-600 text-[30px] text-center lg:text-start">
                   I am a Frontend Developer.
                 </Title>
                 <Text className="text-[15px] lg:text-[20px] text-gray-400 lg:w-[50%]">
