@@ -16,9 +16,12 @@ export function LayoutHeader() {
           <Box>
             <Text className="ml-12 text-md font-bold text-white">
               SAI_HLYAN_PHYOE/
-              <button className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300">
-                FULLSTACK_DEVELOPER
-              </button>
+              <Link
+                href="/"
+                className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300"
+              >
+                <button>FULLSTACK_DEVELOPER</button>
+              </Link>
             </Text>
           </Box>
           <Tooltip className="hidden lg:block" label=<Text>Click Me</Text>>

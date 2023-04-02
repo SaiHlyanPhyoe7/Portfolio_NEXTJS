@@ -77,13 +77,13 @@ export default function Velocity() {
   return (
     <section>
       <ParallaxText baseVelocity={-3}>
-        <Text className="leading-[0.8] text-[5rem] font-light text-white tracking-tighter font-plaster">
-          Dream is not the thing you see in sleep.
+        <Text className="leading-[0.8] text-lg lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
+          Dream is not the thing that you see in sleep.
         </Text>
       </ParallaxText>
       <ParallaxText baseVelocity={3}>
-        <Text className="leading-[0.8] text-[5rem] font-light text-white tracking-tighter font-plaster">
-          But is that thing that doesn&apos;t let you sleep.
+        <Text className="leading-[0.8] text-lg lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
+          But it is the thing that doesn&apos;t let you sleep.
         </Text>
       </ParallaxText>
     </section>

@@ -4,9 +4,11 @@ import { type TChild } from '@/types/types'
 import { Box, Affix, Button, Transition, rem } from '@mantine/core'
 import { IconArrowUp } from '@tabler/icons-react'
 import { useWindowScroll } from '@mantine/hooks'
+import { useRouter } from 'next/router'
 
 export function Layout({ children }: TChild) {
   const [scroll, scrollTo] = useWindowScroll()
+  const router = useRouter()
 
   return (
     <Box className="h-[85vh]">
@@ -14,8 +16,10 @@ export function Layout({ children }: TChild) {
         <LayoutHeader />
       </Box>
       <Box className="flex">
-        <Box className="w-[3rem] h-[43.5rem] z-10">
-          <LayoutSidebar />
+        <Box className={`${router.pathname === '/' ? 'block' : 'hidden'}`}>
+          <Box className="hidden lg:block w-[3rem] h-[43.5rem] z-10">
+            <LayoutSidebar />
+          </Box>
         </Box>
         <Box className="h-full w-full">
           <main>{children}</main>
@@ -24,12 +28,12 @@ export function Layout({ children }: TChild) {
           <Transition transition="slide-up" mounted={scroll.y > 0}>
             {(transitionStyles) => (
               <Button
+                className="text-white bg-blue-400"
                 leftIcon={<IconArrowUp size="1rem" />}
                 style={transitionStyles}
                 onClick={() => {
                   scrollTo({ y: 0 })
                 }}
-                className="!font-sans"
               >
                 Scroll to top
               </Button>
