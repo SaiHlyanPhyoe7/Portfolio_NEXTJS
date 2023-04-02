@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { NavData } from '../../constants/HeaderConstants/headerConstants'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { DownloadCV } from '../../components/DownloadCV/DownloadCV'
 
 export function ToogleNavbarDrawer() {
   const [opened, { open, close }] = useDisclosure(false)
@@ -66,7 +67,7 @@ export function ToogleNavbarDrawer() {
             c="#f7e736"
             className="hover:border-b hover:border-b-[#ed6d3c] hidden lg:block"
           >
-            DOWNLOAD CV
+            <DownloadCV />
           </Text>
         </Box>
       </Drawer>
