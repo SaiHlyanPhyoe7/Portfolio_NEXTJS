@@ -10,6 +10,8 @@ import {
 } from 'framer-motion'
 import { wrap } from '@motionone/utils'
 import { Text } from '@mantine/core'
+import Image from 'next/image'
+import img from '../../../assets/img/rembg_photo.png'
 
 interface ParallaxProps {
   children: React.ReactNode
@@ -75,14 +77,19 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function Velocity() {
   return (
-    <section>
+    <section className="lg:my-48">
       <ParallaxText baseVelocity={-3}>
-        <Text className="leading-[0.8] text-lg lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[50px] lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
           Dream is not the thing that you see in sleep.
         </Text>
       </ParallaxText>
+      <Image
+        className="w-[300px] h-[400px] my-auto mx-auto hidden lg:block"
+        src={img}
+        alt="shp photo"
+      />
       <ParallaxText baseVelocity={3}>
-        <Text className="leading-[0.8] text-lg lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[50px] lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
           But it is the thing that doesn&apos;t let you sleep.
         </Text>
       </ParallaxText>

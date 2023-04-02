@@ -16,7 +16,7 @@ export function Layout({ children }: TChild) {
         <LayoutHeader />
       </Box>
       <Box className="flex">
-        <Box className={`${router.pathname === '/' ? 'fixed' : 'hidden'}`}>
+        <Box className={`${router.pathname === '/' ? '' : 'hidden'}`}>
           <Box className="hidden lg:block w-[3rem] h-[43.5rem] z-10">
             <LayoutSidebar />
           </Box>
@@ -24,7 +24,10 @@ export function Layout({ children }: TChild) {
         <Box className="h-full w-full">
           <main>{children}</main>
         </Box>
-        <Affix position={{ bottom: rem(20), right: rem(20) }}>
+        <Affix
+          className={`${router.pathname !== '/' ? 'hidden' : ''}`}
+          position={{ bottom: rem(20), right: rem(20) }}
+        >
           <Transition transition="slide-up" mounted={scroll.y > 0}>
             {(transitionStyles) => (
               <Button

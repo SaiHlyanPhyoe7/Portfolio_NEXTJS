@@ -51,20 +51,20 @@ export default function Page() {
     }
   }
   return (
-    <Box className="text-white h-screen w-full text-center space-y-8 lg:space-y-28 px-8">
+    <Box className="text-white h-[80vh] w-full text-center space-y-8 lg:space-y-28 px-2 lg:px-8">
       <Flex
         justify="center"
         align="center"
-        className="h-[80vh] m-auto mt-8 bg-[#1d1e30] border-emerald-400 border-4 rounded-3xl"
+        className="m-auto mt-8 bg-[#1d1e30] border-emerald-400 border-none lg:border-4 rounded-3xl"
       >
         <Box className="grid grid-cols-12 w-full h-full">
-          <Box className="col-span-6 text-start my-16 mx-32">
-            <Stack className="gap-16">
+          <Box className="col-span-12 lg:col-span-6 text-start my-16 mx-6 lg:mx-32">
+            <Stack className="lg:gap-16">
               <Box>
                 <Text className="text-[30px] font-bold text-white my-3">
                   Contact Me Via
                 </Text>
-                <Text className="text-[15px] font-bold text-gray-400 w-[60%]">
+                <Text className="text-[15px] font-bold text-gray-400 lg:w-[60%]">
                   Fill up the form and I will get back to you within 24 hours.
                 </Text>
               </Box>
@@ -94,7 +94,7 @@ export default function Page() {
               </Flex>
             </Stack>
           </Box>
-          <Box className="col-span-6 text-start my-16 mx-32 rounded-3xl px-16 py-12 bg-white">
+          <Box className="col-span-12 lg:col-span-6 text-start my-16 mx:12 lg:mx-32 rounded-3xl px-16 py-12 bg-white">
             <form ref={form} onSubmit={sendEmail}>
               <Stack className="gap-6">
                 <TextInput
