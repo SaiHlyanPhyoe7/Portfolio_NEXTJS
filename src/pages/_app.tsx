@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { Box, MantineProvider } from '@mantine/core'
 import { Layout } from '@/layout/Layout'
 import * as React from 'react'
+import { Notifications } from '@mantine/notifications'
 // import useMeasure from 'react-use-measure'
 // import { useTrail, animated } from '@react-spring/web'
 
@@ -57,6 +58,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       }}
     >
+      <Notifications position="bottom-right" />
       {/* <div className={styles.container}>
         <svg style={{ position: 'absolute', width: 0, height: 0 }}>
           <filter id="goo">

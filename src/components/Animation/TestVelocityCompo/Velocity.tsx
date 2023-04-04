@@ -84,7 +84,7 @@ export default function Velocity() {
         </Text>
       </ParallaxText>
       <Image
-        className="w-[300px] h-[400px] my-auto mx-auto hidden lg:block"
+        className="w-[370px] h-[400px] my-auto mx-auto hidden lg:block"
         src={img}
         alt="shp photo"
       />

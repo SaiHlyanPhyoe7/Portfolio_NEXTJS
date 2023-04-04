@@ -1,4 +1,13 @@
-import { Box, Text, Title, Tooltip } from '@mantine/core'
+import {
+  Box,
+  Text,
+  Title,
+  Tooltip,
+  Affix,
+  Button,
+  Transition,
+  rem
+} from '@mantine/core'
 import Typewriter from 'typewriter-effect'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Image from 'next/image'
@@ -7,9 +16,12 @@ import imgProgrammer from '../../assets/img/imgAboutSvgProgrammer.jpg'
 import engineering from '../../assets/img/engineering.jpg'
 import motivation from '../../assets/img/motivation.jpg'
 import Link from 'next/link'
+import { useWindowScroll } from '@mantine/hooks'
+import { IconArrowUp } from '@tabler/icons-react'
 
 export default function Page() {
   const alignCenter = { display: 'flex', alignItems: 'center' }
+  const [scroll, scrollTo] = useWindowScroll()
 
   return (
     <Box className="text-white h-full w-full text-center space-y-8 lg:space-y-28">
@@ -183,6 +195,24 @@ export default function Page() {
           </ParallaxLayer>
         </Parallax>
       </Box>
+      <Affix position={{ bottom: rem(20), right: rem(20) }}>
+        <Transition transition="slide-up" mounted={scroll.y > 0}>
+          {(transitionStyles) => (
+            <Button
+              className="text-white rounded-full h-[100px]"
+              style={transitionStyles}
+              onClick={() => {
+                scrollTo({ y: 0 })
+              }}
+            >
+              <IconArrowUp
+                size="3rem"
+                className="bg-emerald-600 p-2 animate-bounce rounded-full"
+              />
+            </Button>
+          )}
+        </Transition>
+      </Affix>
     </Box>
   )
 }

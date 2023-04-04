@@ -74,12 +74,12 @@ export default function Page() {
                   <Box key={personality.name}>
                     <Box className="grid text-start my-4 lg:my-24 grid-cols-12">
                       <Box className="col-span-8 my-auto">
-                        <Text className="lg:text-sm lg:text[1.2rem] text-gray-400">
+                        <Text className="text-sm lg:text-lg text-gray-400">
                           {personality.desc}
                         </Text>
                       </Box>
                       <Box className="col-span-3">
-                        <Title className="text-[25px] lg:text-[56px]">
+                        <Title className="text-[20px] lg:text-[56px]">
                           {personality.name}
                         </Title>
                       </Box>
