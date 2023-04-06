@@ -79,17 +79,27 @@ export default function Velocity() {
   return (
     <section className="lg:my-48">
       <ParallaxText baseVelocity={-3}>
-        <Text className="leading-[0.8] text-[50px] lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
           Dream is not the thing that you see in sleep.
         </Text>
       </ParallaxText>
+      <ParallaxText baseVelocity={3}>
+        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
+          But it is the thing that doesn&apos;t let you sleep.
+        </Text>
+      </ParallaxText>
       <Image
-        className="w-[370px] h-[400px] my-auto mx-auto hidden lg:block"
+        className="w-[450px] h-[500px] my-auto mx-auto hidden lg:block"
         src={img}
         alt="shp photo"
       />
+      <ParallaxText baseVelocity={-3}>
+        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[6rem] font-light text-white tracking-tighter font-plaster">
+          Dream is not the thing that you see in sleep.
+        </Text>
+      </ParallaxText>
       <ParallaxText baseVelocity={3}>
-        <Text className="leading-[0.8] text-[50px] lg:text-[5rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
           But it is the thing that doesn&apos;t let you sleep.
         </Text>
       </ParallaxText>

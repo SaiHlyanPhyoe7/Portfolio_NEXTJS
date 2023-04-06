@@ -23,7 +23,7 @@ export function ToogleNavbarDrawer() {
           close()
         }}
         className="h-full"
-        title=<Text className="lg:block hidden">Explorer mine</Text>
+        title=<Text className="lg:block hidden">Explorer more</Text>
         overlayProps={{ opacity: 0.5, blur: 2 }}
       >
         {/* Drawer content */}
