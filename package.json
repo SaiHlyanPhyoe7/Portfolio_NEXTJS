@@ -44,7 +44,8 @@
     "react-animated-cursor": "^2.5.2",
     "react-dom": "18.2.0",
     "react-use-measure": "^2.1.1",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.19.0",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.56.0",

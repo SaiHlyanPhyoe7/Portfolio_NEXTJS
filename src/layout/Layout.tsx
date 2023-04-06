@@ -31,14 +31,16 @@ export function Layout({ children }: TChild) {
           <Transition transition="slide-up" mounted={scroll.y > 0}>
             {(transitionStyles) => (
               <Button
-                className="text-white bg-blue-400"
-                leftIcon={<IconArrowUp size="1rem" />}
+                className="text-white rounded-full h-[100px]"
                 style={transitionStyles}
                 onClick={() => {
                   scrollTo({ y: 0 })
                 }}
               >
-                Scroll to top
+                <IconArrowUp
+                  size="3rem"
+                  className="bg-emerald-600 p-2 animate-bounce rounded-full"
+                />
               </Button>
             )}
           </Transition>

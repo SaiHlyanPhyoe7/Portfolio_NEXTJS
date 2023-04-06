@@ -17,6 +17,15 @@ import {
 import Link from 'next/link'
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { notifications } from '@mantine/notifications'
+import { IconCircleCheck, IconExclamationCircle } from '@tabler/icons-react'
+import z from 'zod'
+
+const formSchema = z.object({
+  name: z.string().nonempty(),
+  email: z.string().email(),
+  message: z.string().nonempty()
+})
 
 const useStyles = createStyles(() => ({
   input: {
@@ -28,11 +37,71 @@ export default function Page() {
   const { classes } = useStyles()
   const form = useRef<HTMLFormElement>(null)
 
+  // const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+
+  //   if (form.current != null) {
+  //     emailjs
+  //       .sendForm(
+  //         'gmail',
+  //         'template_ggpr65t',
+  //         form.current,
+  //         'nhhTn313DgeNZcJJJ'
+  //       )
+  //       .then(
+  //         (result) => {
+  //           console.log(result.text)
+  //           form?.current?.reset()
+  //           notifications.show({
+  //             id: 'hello-there',
+  //             withCloseButton: true,
+  //             autoClose: 3000,
+  //             title: 'Success',
+  //             message: 'The email has been send!',
+  //             color: 'green',
+  //             icon: <IconCircleCheck color="green" />,
+  //             className: 'my-notification-class',
+  //             style: { backgroundColor: 'green' },
+  //             sx: { backgroundColor: 'green' },
+  //             loading: false
+  //           })
+  //         },
+  //         (error) => {
+  //           console.log(error.text)
+  //         }
+  //       )
+  //   }
+  // }
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log(form.current)
 
     if (form.current != null) {
+      const formData = new FormData(form.current)
+      const formValues = Object.fromEntries(formData.entries())
+      const validationResult = formSchema.safeParse(formValues)
+
+      if (!validationResult.success) {
+        const errorMessages = validationResult.error.issues.map(
+          (issue) => issue.message
+        )
+        notifications.show({
+          id: 'Error',
+          withCloseButton: true,
+          color: 'fb5607',
+          autoClose: 3000,
+          title: 'All fields are requireds',
+          message: errorMessages.join(', '),
+          icon: <IconExclamationCircle />,
+          className: 'my-notification-class',
+          style: { backgroundColor: 'fb5607' },
+          sx: { backgroundColor: 'fb5607' },
+          loading: false
+        })
+        return
+      }
+
       emailjs
         .sendForm(
           'gmail',
@@ -43,6 +112,20 @@ export default function Page() {
         .then(
           (result) => {
             console.log(result.text)
+            form?.current?.reset()
+            notifications.show({
+              id: 'hello-there',
+              withCloseButton: true,
+              autoClose: 3000,
+              title: 'Success',
+              message: 'The email has been sent!',
+              color: 'green',
+              icon: <IconCircleCheck color="green" />,
+              className: 'my-notification-class',
+              style: { backgroundColor: 'fb5607' },
+              sx: { backgroundColor: 'fb5607' },
+              loading: false
+            })
           },
           (error) => {
             console.log(error.text)
@@ -50,6 +133,7 @@ export default function Page() {
         )
     }
   }
+
   return (
     <Box className="text-white h-[80vh] w-full text-center space-y-8 lg:space-y-28 px-2 lg:px-8">
       <Flex
@@ -112,8 +196,8 @@ export default function Page() {
                     input: classes.input
                   }}
                   radius="md"
-                  placeholder="Mail"
-                  label="Mail"
+                  placeholder="Your Email"
+                  label="Your Email"
                   name="email"
                 />
                 <Textarea

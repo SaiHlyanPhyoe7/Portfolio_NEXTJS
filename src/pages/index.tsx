@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 export default function Page() {
   return (
-    <Box className="text-white h-screen w-full lg:pl-14 text-center space-y-8 lg:space-y-28 px-8">
+    <Box className="text-white h-screen w-full lg:p-14 text-center space-y-8 lg:space-y-28 px-8">
       {/* First Section */}
       <Flex
         direction="column"
@@ -74,12 +74,12 @@ export default function Page() {
                   <Box key={personality.name}>
                     <Box className="grid text-start my-4 lg:my-24 grid-cols-12">
                       <Box className="col-span-8 my-auto">
-                        <Text className="lg:text-sm lg:text[1.2rem] text-gray-400">
+                        <Text className="text-sm lg:text-lg text-gray-400">
                           {personality.desc}
                         </Text>
                       </Box>
                       <Box className="col-span-3">
-                        <Title className="text-[25px] lg:text-[56px]">
+                        <Title className="text-[20px] lg:text-[56px]">
                           {personality.name}
                         </Title>
                       </Box>
@@ -166,7 +166,7 @@ export default function Page() {
           <Flex className="col-span-6 lg:gap-8">
             {LWIcon.map((data) => {
               return (
-                <Tooltip key={data.name} label="Click me  or Drag me">
+                <Tooltip key={data.name} label="Drag me">
                   <Link href={data.link} className="mt-6 hover:text-blue-400">
                     <motion.p
                       drag
