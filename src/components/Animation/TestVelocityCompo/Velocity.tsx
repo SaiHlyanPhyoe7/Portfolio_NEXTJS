@@ -79,12 +79,12 @@ export default function Velocity() {
   return (
     <section className="lg:my-48">
       <ParallaxText baseVelocity={-3}>
-        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[40px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
           Dream is not the thing that you see in sleep.
         </Text>
       </ParallaxText>
       <ParallaxText baseVelocity={3}>
-        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[40px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
           But it is the thing that doesn&apos;t let you sleep.
         </Text>
       </ParallaxText>
@@ -94,12 +94,12 @@ export default function Velocity() {
         alt="shp photo"
       />
       <ParallaxText baseVelocity={-3}>
-        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[6rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[40px] hover:text-emerald-400 lg:text-[6rem] font-light text-white tracking-tighter font-plaster">
           Dream is not the thing that you see in sleep.
         </Text>
       </ParallaxText>
       <ParallaxText baseVelocity={3}>
-        <Text className="leading-[0.8] text-[50px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
+        <Text className="leading-[0.8] text-[40px] hover:text-emerald-400 lg:text-[5.5rem] font-light text-white tracking-tighter font-plaster">
           But it is the thing that doesn&apos;t let you sleep.
         </Text>
       </ParallaxText>
