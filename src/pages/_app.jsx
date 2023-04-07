@@ -1,5 +1,4 @@
 import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
 import { Box, MantineProvider } from '@mantine/core'
 import { Layout } from '@/layout/Layout'
 import * as React from 'react'
@@ -12,8 +11,7 @@ import dynamic from 'next/dynamic'
 
 const fast = { tension: 1200, friction: 40 }
 const slow = { mass: 10, tension: 200, friction: 50 }
-const trans = (x: number, y: number) =>
-  `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`
+const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`
 
 const AnimatedCursor = dynamic(
   async () => await import('react-animated-cursor'),
@@ -22,14 +20,14 @@ const AnimatedCursor = dynamic(
   }
 )
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App ({ Component, pageProps }) {
   const [trail, api] = useTrail(3, (i) => ({
     xy: [0, 0],
     config: i === 0 ? fast : slow
   }))
   const [ref, { left, top }] = useMeasure()
 
-  const handleMouseMove = (e: any) => {
+  const handleMouseMove = (e) => {
     api.start({ xy: [e.clientX - left, e.clientY - top] })
   }
 

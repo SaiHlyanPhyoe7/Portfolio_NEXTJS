@@ -30,6 +30,6 @@
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/404.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/404.tsx", "src/pages/_app.jsx"],
   "exclude": ["node_modules"]
 }
