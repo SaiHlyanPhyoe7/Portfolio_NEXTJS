@@ -19,8 +19,8 @@ export default function Page() {
   const [scroll, scrollTo] = useWindowScroll()
 
   return (
-    <Box className="text-white h-fit pb-12 lg:pb-0 lg:h-[80vh] w-full text-center px-2 lg:px-8">
-      <Title order={1} className="my-8 underline underline-offset-4">
+    <Box className="text-white h-fit pb-20 w-full text-center px-2 lg:px-8">
+      <Title order={1} className="my-14 underline underline-offset-4">
         Some of My Skills Include
       </Title>
       <Box className="grid grid-cols-12 lg:gap-x-16 gap-y-12 lg:gap-y-24">

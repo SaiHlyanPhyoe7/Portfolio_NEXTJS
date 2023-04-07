@@ -158,7 +158,7 @@ export default function Page() {
           <Box className="hidden lg:grid col-span-4"></Box>
           <motion.div>
             <div className="text-center h-full w-full col-span-12 lg:col-span-2">
-              <Flex align="end" className="h-full ">
+              <Flex align="center" className="h-full ">
                 GOTO :
               </Flex>
             </div>

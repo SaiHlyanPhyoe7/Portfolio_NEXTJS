@@ -15,7 +15,6 @@ import img from '../../assets/img/rembg_photo.png'
 import imgProgrammer from '../../assets/img/imgAboutSvgProgrammer.jpg'
 import engineering from '../../assets/img/engineering.jpg'
 import motivation from '../../assets/img/motivation.jpg'
-import Link from 'next/link'
 import { useWindowScroll } from '@mantine/hooks'
 import { IconArrowUp } from '@tabler/icons-react'
 
@@ -81,7 +80,7 @@ export default function Page() {
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
             <div className="w-[95%] lg:w-[55%] text-start">
-              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[10px] lg:text-xl">
+              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-xl">
                 {/* three S
                 success
                 i have been blank
@@ -91,13 +90,13 @@ export default function Page() {
                   className="h-fit block lg:hidden"
                   alt="programmer"
                 />
-                <Text>
+                <Text className="pt-40 lg:pt-0">
                   I have been doing Frontend Developer for last 2 years and I
                   specialize in helping companies and entrepreneurs writing
                   their company profile and business page.
                 </Text>
                 <Text>
-                  In the last year along i help dozens of client in over 5
+                  In the last year along I help dozens of client in over 5
                   different industries. Containing Social Media, Ecommerce,
                   Banking, Company Profile, Food Industry,...
                 </Text>
@@ -123,25 +122,25 @@ export default function Page() {
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
             <div className="w-[95%] lg:w-[55%] text-start">
-              <Box className="w-[100%] lg:w-[70%] space-y-4 lg:space-y-12 text-start text-[10px] lg:text-xl">
+              <Box className="w-[100%] lg:w-[70%] space-y-4 lg:space-y-12 text-start text-[15px] lg:text-xl">
                 <Image
                   src={motivation}
                   className="h-fit block lg:hidden"
                   alt="motivation"
                 />
-                <Text>
+                <Text className="pt-52 lg:pt-0">
                   As you know My name is Ryan, Other than Programming ,I have a
-                  diverse range of skills and quality i believe a need for
+                  diverse range of skills and quality that I believe a need for
                   developers.
                 </Text>
                 <Text>I am very positive.I love being at work.</Text>
                 <Text>
                   I&apos;m happy working on my own but i also like to work as
-                  part of a team{' '}
+                  part of a team.
                 </Text>
                 <Text>
                   I have goals outside of work which mean i need to perform to
-                  high standard in my job in order to achieve those goals
+                  high standard in my job in order to achieve those goals.
                 </Text>
                 <Text>So I am very focus on my work.</Text>
                 <Text>I am very good at planning and organizing my work</Text>
@@ -155,13 +154,13 @@ export default function Page() {
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
             <div className="w-[95%] lg:w-[55%] text-start">
-              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[10px] lg:text-xl">
+              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-xl">
                 <Image
                   src={engineering}
                   className="h-fit block lg:hidden"
                   alt="engineering"
                 />
-                <Text>
+                <Text className="pt-44 lg:pt-0">
                   I also coming from a circuit engineering background.
                 </Text>
                 <Text>
@@ -181,13 +180,7 @@ export default function Page() {
                 </Text>
                 <Tooltip label="goto project page">
                   <Text className="my-12">
-                    <Link
-                      href="/projects"
-                      className="text-blue-700 underline cursor-pointer"
-                    >
-                      Click Here
-                    </Link>{' '}
-                    To View All of my Projects
+                    Goto Project Page to View All of my Projects
                   </Text>
                 </Tooltip>
               </Box>
