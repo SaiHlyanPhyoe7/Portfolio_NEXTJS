@@ -68,6 +68,7 @@ export default function Page() {
                     Price: {data.price}
                   </Text>
                   <Link
+                    target="_blank"
                     href={data.link}
                     className="text-sm lg:text text-indigo-400 underline underline-offset-4"
                   >

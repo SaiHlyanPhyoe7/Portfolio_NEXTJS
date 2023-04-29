@@ -77,7 +77,7 @@ export const projectCard = [
     title: 'Vite Foodie Project',
     para: 'This is Vite Foodie Project, Inspire From Pinterest UI.',
     techStack: ['React', 'Bootstrap'],
-    link: 'link no exists',
+    link: 'sai-hlyan-phyoe-portfolio.netlify.app/',
     likes: 53
   },
   {
@@ -99,7 +99,7 @@ export const projectCard = [
     title: 'Second Portfolio Lighmode',
     para: 'This is my Second Portfolio with Lightmode',
     techStack: ['React', 'Tailwind', 'Framer Motion'],
-    link: 'link not exists',
+    link: 'sai-hlyan-phyoe-portfolio.netlify.app/',
     likes: 80
   },
   {
@@ -110,7 +110,7 @@ export const projectCard = [
     title: 'Second Portfolio Darkmode',
     para: 'This is my Second Portfolio with Darkmode',
     techStack: ['React', 'Tailwind', 'Framer Motion'],
-    link: 'link not exists',
+    link: 'sai-hlyan-phyoe-portfolio.netlify.app/',
     likes: 88
   },
   {
@@ -121,7 +121,7 @@ export const projectCard = [
     title: 'CRM Home',
     para: 'This is Customer Relation Management Home Page. Login username: sai@gmail.com pw: sai@123',
     techStack: ['React', 'CSS', 'Firebase'],
-    link: 'https://assignment-k.netlify.app/signin',
+    link: 'https://assignment-k.netlify.app',
     likes: 270
   },
   {
@@ -132,7 +132,7 @@ export const projectCard = [
     title: 'CRM Add Customer',
     para: 'This is Customer Relation Management Add New Customer Page. Login username: sai@gmail.com pw: sai@123',
     techStack: ['React', 'CSS', 'Firebase'],
-    link: 'https://assignment-k.netlify.app/signin',
+    link: 'https://assignment-k.netlify.app',
     likes: 200
   },
 
