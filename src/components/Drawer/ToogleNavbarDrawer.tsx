@@ -65,7 +65,7 @@ export function ToogleNavbarDrawer() {
             w="fit-content"
             m="5rem"
             c="#f7e736"
-            className="hover:border-b hover:border-b-[#ed6d3c] hidden lg:block"
+            className="hover:border-b hover:border-b-[#ed6d3c] block"
           >
             <DownloadCV />
           </Text>
