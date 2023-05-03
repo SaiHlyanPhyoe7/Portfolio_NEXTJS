@@ -28,10 +28,10 @@ export function ToogleNavbarDrawer() {
       >
         {/* Drawer content */}
         <Flex
-          className="m-0 lg:m-[5rem]"
+          className="m-0 lg:m-[5rem] h-[55vh] lg:h-[40vh]"
           direction="column"
           gap="xl"
-          h="60vh"
+          h=""
           justify={matches ? 'start' : 'center'}
           align={matches ? 'start' : 'center'}
           c="#fffcf2"
@@ -61,12 +61,7 @@ export function ToogleNavbarDrawer() {
           })}
         </Flex>
         <Box>
-          <Text
-            w="fit-content"
-            m="5rem"
-            c="#f7e736"
-            className="hover:border-b hover:border-b-[#ed6d3c] block"
-          >
+          <Text w="fit-content" mx="5rem" c="#f7e736" className="">
             <DownloadCV />
           </Text>
         </Box>
