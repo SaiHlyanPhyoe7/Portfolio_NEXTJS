@@ -12,9 +12,6 @@ import Typewriter from 'typewriter-effect'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Image from 'next/image'
 import img from '../../assets/img/rembg_photo.png'
-import imgProgrammer from '../../assets/img/imgAboutSvgProgrammer.jpg'
-import engineering from '../../assets/img/engineering.jpg'
-import motivation from '../../assets/img/motivation.jpg'
 import { useWindowScroll } from '@mantine/hooks'
 import { IconArrowUp } from '@tabler/icons-react'
 
@@ -85,11 +82,11 @@ export default function Page() {
                 success
                 i have been blank
                 on my background is blank */}
-                <Image
+                {/* <Image
                   src={imgProgrammer}
                   className="h-fit block lg:hidden"
                   alt="programmer"
-                />
+                /> */}
                 <Text className="pt-40 lg:pt-0">
                   I have been doing Frontend Developer for last 2 years and I
                   specialize in helping companies and entrepreneurs writing
@@ -123,11 +120,11 @@ export default function Page() {
           >
             <div className="w-[95%] lg:w-[55%] text-start">
               <Box className="w-[100%] lg:w-[70%] space-y-4 lg:space-y-12 text-start text-[15px] lg:text-xl">
-                <Image
+                {/* <Image
                   src={motivation}
                   className="h-fit block lg:hidden"
                   alt="motivation"
-                />
+                /> */}
                 <Text className="pt-52 lg:pt-0">
                   As you know My name is Ryan, Other than Programming ,I have a
                   diverse range of skills and quality that I believe a need for
@@ -155,11 +152,11 @@ export default function Page() {
           >
             <div className="w-[95%] lg:w-[55%] text-start">
               <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-xl">
-                <Image
+                {/* <Image
                   src={engineering}
                   className="h-fit block lg:hidden"
                   alt="engineering"
-                />
+                /> */}
                 <Text className="pt-44 lg:pt-0">
                   I also coming from a circuit engineering background.
                 </Text>
