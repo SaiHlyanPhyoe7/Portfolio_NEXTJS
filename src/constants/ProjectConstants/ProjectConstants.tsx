@@ -12,6 +12,7 @@ import socialMediaFriends from '../../assets/img/ProjectImg/socialMediaFriends.p
 import socialMediaHome from '../../assets/img/ProjectImg/socialMediaHome.png'
 import socialMediaMyProfile from '../../assets/img/ProjectImg/socialMediaMyProfile.png'
 import viteFoodie from '../../assets/img/ProjectImg/foodie.png'
+import cryptoWeb from '../../assets/img/ProjectImg/cryptoWeb.png'
 
 export const projectCard = [
   {
@@ -168,5 +169,16 @@ export const projectCard = [
     techStack: ['React', 'Bootstrap'],
     link: 'https://www.figma.com/proto/pMFuP9ElN3AWbUQeFbz9oc/Untitled?node-id=13%3A2&starting-point-node-id=13%3A2',
     likes: 53
+  },
+  {
+    id: 14,
+    img: cryptoWeb,
+    rating: 3.5,
+    price: '15$',
+    title: 'Mini Crypto Website',
+    para: 'This is Crypto Mini Website.',
+    techStack: ['NextJs', 'Rtk Query', 'Rapid Api', 'Tailwind'],
+    link: 'https://crypto-website-gamma.vercel.app/',
+    likes: 31
   }
 ]
