@@ -39,6 +39,7 @@ export function ToogleNavbarDrawer() {
           {NavData?.map((nav) => {
             return (
               <Link
+                target="_blank"
                 key={nav.name}
                 onClick={() => {
                   setNavToggle(false)

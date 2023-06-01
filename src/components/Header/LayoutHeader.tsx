@@ -17,6 +17,7 @@ export function LayoutHeader() {
             <Text className="ml-12 text-md font-bold text-white">
               SAI_HLYAN_PHYOE/
               <Link
+                target="_blank"
                 href="/"
                 className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300"
               >
@@ -25,7 +26,10 @@ export function LayoutHeader() {
             </Text>
           </Box>
           <Tooltip className="hidden lg:block" label=<Text>Click Me</Text>>
-            <Link href={'https://github.com/SaiHlyanPhyoe7?tab=repositories'}>
+            <Link
+              target="_blank"
+              href={'https://github.com/SaiHlyanPhyoe7?tab=repositories'}
+            >
               <Stepper
                 active={active}
                 onStepClick={setActive}

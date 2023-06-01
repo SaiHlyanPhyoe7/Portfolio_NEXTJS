@@ -41,6 +41,7 @@ export default function Page() {
           <Tooltip label="Let's Explore More..">
             <Link
               href="/about"
+              target="_blank"
               className="underline underline-offset-4 text-green-400"
             >
               &nbsp;/about
@@ -167,7 +168,11 @@ export default function Page() {
             {LWIcon.map((data) => {
               return (
                 <Tooltip key={data.name} label="Drag me">
-                  <Link href={data.link} className="mt-6 hover:text-blue-400">
+                  <Link
+                    target="_blank"
+                    href={data.link}
+                    className="mt-6 hover:text-blue-400"
+                  >
                     <motion.p
                       drag
                       dragConstraints={{

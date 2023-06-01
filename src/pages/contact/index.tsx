@@ -171,7 +171,9 @@ export default function Page() {
                 {socialContactInfoLogo.map((info) => {
                   return (
                     <Tooltip key={info.link} label={info.link}>
-                      <Link href={info.link}>{info.icon}</Link>
+                      <Link target="_blank" href={info.link}>
+                        {info.icon}
+                      </Link>
                     </Tooltip>
                   )
                 })}
