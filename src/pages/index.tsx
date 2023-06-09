@@ -41,7 +41,6 @@ export default function Page() {
           <Tooltip label="Let's Explore More..">
             <Link
               href="/about"
-              target="_blank"
               className="underline underline-offset-4 text-green-400"
             >
               &nbsp;/about
@@ -96,8 +95,8 @@ export default function Page() {
 
       {/* Third Section */}
       <Box className="relative pt-0 lg:py-14 lg:h-[60%] w-full">
-        <span className="absolute top-0 w-40 lg:h-[580px] lg:w-[830px] h-20 border border-blue-400"></span>
-        <Text className="text-[#ec9033] text-center text-[25px] lg:text-[10rem]">
+        <span className="absolute top-0 w-40 lg:h-[380px] lg:w-[630px] h-20 border border-blue-400"></span>
+        <Text className="text-[#ec9033] text-center text-[25px] lg:text-[100px]">
           Think Outside the SQUARE Space
         </Text>
       </Box>
@@ -126,7 +125,7 @@ export default function Page() {
           <Text className="text-[30px] lg:text-[50px] text-gray-400 text-start">
             What Can i DO?
           </Text>
-          <Text className="lg:pl-[5rem] text-sm lg:text-[2rem] text-start text-gray-600">
+          <Text className="lg:pl-[5rem] text-sm lg:text-[25px] text-start text-gray-600">
             Design is not just what it looks like and feels like. Design is how
             it works.
           </Text>
@@ -137,7 +136,7 @@ export default function Page() {
             return (
               <Box
                 key={data.name}
-                className="rounded-md border p-8 col-span-12 lg:col-span-4 border-white"
+                className="rounded-md border px-4 py-8 lg:p-8 col-span-12 lg:col-span-4 border-white"
               >
                 <Text className="my-12">{data.name}</Text>
                 {data.icon}
@@ -168,11 +167,7 @@ export default function Page() {
             {LWIcon.map((data) => {
               return (
                 <Tooltip key={data.name} label="Drag me">
-                  <Link
-                    target="_blank"
-                    href={data.link}
-                    className="mt-6 hover:text-blue-400"
-                  >
+                  <Link href={data.link} className="mt-6 hover:text-blue-400">
                     <motion.p
                       drag
                       dragConstraints={{

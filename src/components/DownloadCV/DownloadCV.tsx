@@ -7,7 +7,7 @@ export function DownloadCV() {
       target="_blank"
       className="hover:border-b hover:border-b-[#ed6d3c]"
     >
-      View My CV
+      View Sai&apos; CV
     </Link>
   )
 }

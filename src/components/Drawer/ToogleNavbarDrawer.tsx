@@ -13,7 +13,7 @@ export function ToogleNavbarDrawer() {
   const matches = useMediaQuery('(min-width: 1024px)')
 
   return (
-    <>
+    <Box>
       <Drawer
         position="right"
         size={matches ? '50%' : '80%'}
@@ -39,7 +39,6 @@ export function ToogleNavbarDrawer() {
           {NavData?.map((nav) => {
             return (
               <Link
-                target="_blank"
                 key={nav.name}
                 onClick={() => {
                   setNavToggle(false)
@@ -61,14 +60,16 @@ export function ToogleNavbarDrawer() {
             )
           })}
         </Flex>
-        <Box>
-          <Text w="fit-content" mx="5rem" c="#f7e736" className="">
-            <DownloadCV />
-          </Text>
-        </Box>
+        <Text
+          w="fit-content"
+          c="#f7e736"
+          className="m-0 lg:mx-[5rem] w-full lg:w-auto lg:text-start text-center"
+        >
+          <DownloadCV />
+        </Text>
       </Drawer>
 
-      <Group position="center" className="lg:ml-0 ml-10">
+      <Group position="center" className="">
         <button
           onClick={() => {
             setTimeout(() => {
@@ -105,6 +106,6 @@ export function ToogleNavbarDrawer() {
           ></span>
         </button>
       </Group>
-    </>
+    </Box>
   )
 }

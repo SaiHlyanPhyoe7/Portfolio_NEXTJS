@@ -25,7 +25,7 @@ export default function Page() {
         <Parallax pages={4.2} className="">
           <ParallaxLayer offset={0} speed={0.5} className="">
             <Box className="">
-              <Box className="flex flex-col w-full h-[80vh] space-y-8 items-center justify-center text-[25px] lg:text-[50px]">
+              <Box className="flex flex-col px-8 w-full h-[80vh] space-y-8 items-center justify-center text-[25px] lg:text-4xl">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
@@ -77,16 +77,7 @@ export default function Page() {
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
             <div className="w-[95%] lg:w-[55%] text-start">
-              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-xl">
-                {/* three S
-                success
-                i have been blank
-                on my background is blank */}
-                {/* <Image
-                  src={imgProgrammer}
-                  className="h-fit block lg:hidden"
-                  alt="programmer"
-                /> */}
+              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-md">
                 <Text className="pt-40 lg:pt-0">
                   I have been doing Frontend Developer for last 2 years and I
                   specialize in helping companies and entrepreneurs writing
@@ -119,7 +110,7 @@ export default function Page() {
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
             <div className="w-[95%] lg:w-[55%] text-start">
-              <Box className="w-[100%] lg:w-[70%] space-y-4 lg:space-y-12 text-start text-[15px] lg:text-xl">
+              <Box className="w-[100%] lg:w-[70%] space-y-4 lg:space-y-12 text-start text-[15px] lg:text-md">
                 {/* <Image
                   src={motivation}
                   className="h-fit block lg:hidden"
@@ -151,7 +142,7 @@ export default function Page() {
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
             <div className="w-[95%] lg:w-[55%] text-start">
-              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-xl">
+              <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-md">
                 {/* <Image
                   src={engineering}
                   className="h-fit block lg:hidden"

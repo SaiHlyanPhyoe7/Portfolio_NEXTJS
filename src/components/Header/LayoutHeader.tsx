@@ -12,19 +12,20 @@ export function LayoutHeader() {
         className="cursor-pointer"
         style={{ boxShadow: '#f5f5f755 0px 5px 5px' }}
       >
-        <Flex justify="space-between" align="center" mx="xl" px="xl">
-          <Box>
-            <Text className="ml-12 text-md font-bold text-white">
-              SAI_HLYAN_PHYOE/
-              <Link
-                target="_blank"
-                href="/"
-                className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300"
-              >
-                <button>FULLSTACK_DEVELOPER</button>
-              </Link>
-            </Text>
-          </Box>
+        <Flex
+          justify="space-between"
+          align="center"
+          className="px-7 md:px-10 lg:px-20"
+        >
+          <Text className="text-md font-bold text-white">
+            SAI_HLYAN_PHYOE/
+            <Link
+              href="/"
+              className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300"
+            >
+              <button>FULLSTACK_DEVELOPER</button>
+            </Link>
+          </Text>
           <Tooltip className="hidden lg:block" label=<Text>Click Me</Text>>
             <Link
               target="_blank"
@@ -54,9 +55,7 @@ export function LayoutHeader() {
           </Tooltip>
 
           {/* Toogler Navbar */}
-          <Box>
-            <ToogleNavbarDrawer />
-          </Box>
+          <ToogleNavbarDrawer />
         </Flex>
       </Box>
     </Box>

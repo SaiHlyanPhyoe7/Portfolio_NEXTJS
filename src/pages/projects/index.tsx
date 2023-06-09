@@ -21,7 +21,7 @@ export default function Page() {
   const [scroll, scrollTo] = useWindowScroll()
 
   return (
-    <Box className="text-white static h-full lg:mx-48 pb-12">
+    <Box className="text-white static h-full lg:mx-36 pb-12">
       <Title order={1} my="50px">
         My Projects
       </Title>
@@ -30,7 +30,7 @@ export default function Page() {
           return (
             <Box
               key={data.id}
-              className="col-span-12 lg:col-span-6 2xl:col-span-4 p-12 flex flex-col space-y-8 border border-emerald-400 rounded-tl-[20px] rounded-tr-[90px] rounded-br-[15px] rounded-bl-[50px]"
+              className="col-span-12 lg:col-span-6 2xl:col-span-4 p-8 flex flex-col space-y-6 border border-emerald-400 rounded-tl-[20px] rounded-tr-[90px] rounded-br-[15px] rounded-bl-[50px]"
             >
               <Box className="space-y-6">
                 <Image
@@ -46,8 +46,8 @@ export default function Page() {
                 </Flex>
               </Box>
 
-              <Box className="space-y-4">
-                <Box className="space-y-4">
+              <Box className="space-y-2">
+                <Box className="space-y-2">
                   <Text className="font-bold text-lg">{data.title}</Text>
                   <Text className="text-gray-400 text-sm">{data.para}</Text>
                 </Box>
@@ -64,13 +64,13 @@ export default function Page() {
                   </Box>
                 </Box>
                 <Flex justify="space-between" align="center">
-                  <Text className="text-sm lg:text-lg">
+                  <Text className="text-sm lg:text-md">
                     Price: {data.price}
                   </Text>
                   <Link
                     target="_blank"
                     href={data.link}
-                    className="text-sm lg:text text-indigo-400 underline underline-offset-4"
+                    className="text-sm lg:text-md text-indigo-400 underline underline-offset-4"
                   >
                     View this Project
                   </Link>
