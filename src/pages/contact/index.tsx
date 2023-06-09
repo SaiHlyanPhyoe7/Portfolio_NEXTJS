@@ -139,9 +139,9 @@ export default function Page() {
       <Flex
         justify="center"
         align="center"
-        className="m-auto mt-8 bg-[#1d1e30] border-emerald-400 border-none xl:border-4 rounded-3xl"
+        className="m-auto bg-[#1d1e30] border-emerald-400 border-none xl:border-4 rounded-3xl"
       >
-        <Box className="grid grid-cols-12 w-full h-full">
+        <Box className="grid grid-cols-12 w-full">
           <Box className="col-span-12 xl:col-span-6 text-start my-16 mx-6 xl:mx-32">
             <Stack className="xl:gap-16">
               <Box>
