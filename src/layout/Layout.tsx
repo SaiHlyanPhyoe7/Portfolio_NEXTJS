@@ -1,7 +1,7 @@
 import { LayoutHeader } from '@/components/Header/LayoutHeader'
 import { LayoutSidebar } from '@/components/Sidebar/LayoutSidebar'
 import { type TChild } from '@/types/types'
-import { Box, Affix, Button, Transition, rem } from '@mantine/core'
+import { Box, Affix, Transition, rem } from '@mantine/core'
 import { IconArrowUp } from '@tabler/icons-react'
 import { useWindowScroll } from '@mantine/hooks'
 import { useRouter } from 'next/router'
@@ -30,7 +30,7 @@ export function Layout({ children }: TChild) {
         >
           <Transition transition="slide-up" mounted={scroll.y > 0}>
             {(transitionStyles) => (
-              <Button
+              <Box
                 className="text-white rounded-full h-[100px]"
                 style={transitionStyles}
                 onClick={() => {
@@ -41,7 +41,7 @@ export function Layout({ children }: TChild) {
                   size="3rem"
                   className="bg-emerald-600 p-2 animate-bounce rounded-full"
                 />
-              </Button>
+              </Box>
             )}
           </Transition>
         </Affix>

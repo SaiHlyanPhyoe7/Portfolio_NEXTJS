@@ -4,7 +4,6 @@ import {
   Title,
   Tooltip,
   Affix,
-  Button,
   Transition,
   rem
 } from '@mantine/core'
@@ -179,7 +178,7 @@ export default function Page() {
       <Affix position={{ bottom: rem(20), right: rem(20) }}>
         <Transition transition="slide-up" mounted={scroll.y > 0}>
           {(transitionStyles) => (
-            <Button
+            <Box
               className="text-white rounded-full h-[100px]"
               style={transitionStyles}
               onClick={() => {
@@ -190,7 +189,7 @@ export default function Page() {
                 size="3rem"
                 className="bg-emerald-600 p-2 animate-bounce rounded-full"
               />
-            </Button>
+            </Box>
           )}
         </Transition>
       </Affix>
