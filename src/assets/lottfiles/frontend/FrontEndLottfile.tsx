@@ -1,18 +1,19 @@
 import React from 'react'
 import Lottie from 'lottie-react'
 import animation from './frontend.json'
+import { Box } from '@mantine/core'
 
 export const FrontEndLottfile = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="h-[300px] w-[300px]">
+    <Box className="flex justify-center items-center">
+      <Box className="h-[300px] w-[300px]">
         <Lottie
           className="loading"
           animationData={animation}
           loop={true}
           autoPlay={true}
         />
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 }

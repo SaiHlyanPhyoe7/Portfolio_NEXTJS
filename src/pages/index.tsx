@@ -157,11 +157,11 @@ export default function Page() {
         <Box className="grid grid-cols-12">
           <Box className="hidden lg:grid col-span-4"></Box>
           <motion.div>
-            <div className="text-center h-full w-full col-span-12 lg:col-span-2">
+            <Box className="text-center h-full w-full col-span-12 lg:col-span-2">
               <Flex align="center" className="h-full ">
                 GOTO :
               </Flex>
-            </div>
+            </Box>
           </motion.div>
           <Flex className="col-span-6 lg:gap-8">
             {LWIcon.map((data) => {

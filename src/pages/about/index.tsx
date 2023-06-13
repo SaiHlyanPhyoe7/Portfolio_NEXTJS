@@ -57,13 +57,13 @@ export default function Page() {
               justifyContent: 'flex-start'
             }}
           >
-            <div className={'bg-[#ff6d6d]'}>
+            <Box className={'bg-[#ff6d6d]'}>
               <Image
                 src={img}
                 alt="photo"
                 className="hidden lg:block w-[40%] h-fit"
               />
-            </div>
+            </Box>
           </ParallaxLayer>
           <Image
             src={img}
@@ -75,7 +75,7 @@ export default function Page() {
             speed={1.5}
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
-            <div className="w-[95%] lg:w-[55%] text-start">
+            <Box className="w-[95%] lg:w-[55%] text-start">
               <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-md">
                 <Text className="pt-40 lg:pt-0">
                   I have been doing Frontend Developer for last 2 years and I
@@ -100,7 +100,7 @@ export default function Page() {
                   for.Where I could join a strog team.
                 </Text>
               </Box>
-            </div>
+            </Box>
           </ParallaxLayer>
 
           <ParallaxLayer
@@ -108,7 +108,7 @@ export default function Page() {
             speed={1.5}
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
-            <div className="w-[95%] lg:w-[55%] text-start">
+            <Box className="w-[95%] lg:w-[55%] text-start">
               <Box className="w-[100%] lg:w-[70%] space-y-4 lg:space-y-12 text-start text-[15px] lg:text-md">
                 {/* <Image
                   src={motivation}
@@ -132,7 +132,7 @@ export default function Page() {
                 <Text>So I am very focus on my work.</Text>
                 <Text>I am very good at planning and organizing my work</Text>
               </Box>
-            </div>
+            </Box>
           </ParallaxLayer>
           <ParallaxLayer
             className=""
@@ -140,7 +140,7 @@ export default function Page() {
             speed={1.5}
             style={{ ...alignCenter, justifyContent: 'flex-end' }}
           >
-            <div className="w-[95%] lg:w-[55%] text-start">
+            <Box className="w-[95%] lg:w-[55%] text-start">
               <Box className="w-[100%] lg:w-[70%] space-y-12 text-start text-[15px] lg:text-md">
                 {/* <Image
                   src={engineering}
@@ -171,7 +171,7 @@ export default function Page() {
                   </Text>
                 </Tooltip>
               </Box>
-            </div>
+            </Box>
           </ParallaxLayer>
         </Parallax>
       </Box>
