@@ -9,7 +9,7 @@ import {
   useAnimationFrame
 } from 'framer-motion'
 import { wrap } from '@motionone/utils'
-import { Text } from '@mantine/core'
+import { Box, Text } from '@mantine/core'
 import Image from 'next/image'
 import img from '../../../assets/img/rembg_photo.png'
 
@@ -64,14 +64,14 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className="parallax">
+    <Box className="parallax">
       <motion.div className="scroller" style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
       </motion.div>
-    </div>
+    </Box>
   )
 }
 
