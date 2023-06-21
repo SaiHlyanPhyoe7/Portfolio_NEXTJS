@@ -1,10 +1,10 @@
-import { PencilCompo } from '@/assets/lottfiles/pencil/PencilCompo'
 import { LWIcon, wcid } from '@/constants/HeaderConstants/headerConstants'
-import { pencil, personality } from '@/constants/HomeConstants/homeConstants'
+import { personality } from '@/constants/HomeConstants/homeConstants'
 import { Box, Divider, Flex, Text, Title, Tooltip } from '@mantine/core'
 import Link from 'next/link'
 import Velocity from '../components/Animation/TestVelocityCompo/Velocity'
 import { motion } from 'framer-motion'
+import TextHoverImg from '@/components/TextHoverImg'
 
 export default function Page() {
   return (
@@ -17,15 +17,20 @@ export default function Page() {
         className="w-full lg:h-[60vh] pt-14 lg:pt-60 block border-b border-blue-400 rounded-full"
       >
         <Flex justify="center" align="center" gap="xl">
-          <Text className="text-[48px] font-semibold">Who Am</Text>
-          <Tooltip label="Sai Hlyan Phyoe">
-            <Flex justify="space-between" align="center">
+          <TextHoverImg>
+            <Text className="text-[48px] font-semibold">Who Am</Text>
+          </TextHoverImg>
+          <Flex justify="space-between" align="center">
+            <Tooltip
+              className="hidden lg:block"
+              label=<Text>Sai Hlyan Phyoe</Text>
+            >
               <Text className="text-[48px] text-[#ec9033] font-semibold">
                 I
               </Text>
-              <Text className="text-[48px] font-semibold">?</Text>
-            </Flex>
-          </Tooltip>
+            </Tooltip>
+            <Text className="text-[48px] font-semibold">?</Text>
+          </Flex>
         </Flex>
         <Text className="text-[24px] font-semibold">
           Let&apos;s Express Through
@@ -102,7 +107,7 @@ export default function Page() {
       </Box>
 
       {/* Fourth Section */}
-      <Box className="w-full h-fit lg:pt-14">
+      {/* <Box className="w-full h-fit lg:pt-14">
         <Box className="grid grid-cols-12">
           {pencil.map((pencil) => {
             return (
@@ -112,7 +117,7 @@ export default function Page() {
             )
           })}
         </Box>
-      </Box>
+      </Box> */}
 
       {/* Fifth Section */}
       <Box className="h-10vh">
