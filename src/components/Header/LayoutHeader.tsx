@@ -17,15 +17,19 @@ export function LayoutHeader() {
           align="center"
           className="px-7 md:px-10 lg:px-20"
         >
-          <Text className="text-md font-bold text-white">
-            SAI_HLYAN_PHYOE/
-            <Link
-              href="/"
-              className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300"
-            >
-              <button>FULLSTACK_DEVELOPER</button>
-            </Link>
-          </Text>
+          <Box className="text-md font-bold text-white">
+            <Tooltip className="hidden lg:block" label="I'm just a text">
+              <Text className="inline">SAI_HLYAN_PHYOE/</Text>
+            </Tooltip>
+            <Tooltip className="hidden lg:block" label="Click me to go home!">
+              <Link
+                href="/"
+                className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-b hover:border-b-orange-300"
+              >
+                <button>FULLSTACK_DEVELOPER</button>
+              </Link>
+            </Tooltip>
+          </Box>
           <Tooltip className="hidden lg:block" label=<Text>Click Me</Text>>
             <Link
               target="_blank"

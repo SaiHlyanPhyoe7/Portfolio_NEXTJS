@@ -99,7 +99,7 @@ export default function Page() {
 
       {/* Third Section */}
       <Box className="relative pt-0 lg:py-14 lg:h-[60%] w-full">
-        <span className="absolute top-0 w-40 lg:h-[380px] lg:w-[630px] h-20 border border-blue-400"></span>
+        <span className="absolute top-0 w-40 lg:w-[450px] lg:h-[380px] xl:w-[630px] h-20 border border-blue-400"></span>
         <Text className="text-[#ec9033] text-center text-[25px] lg:text-[100px]">
           Think Outside the SQUARE Space
         </Text>
