@@ -4,7 +4,6 @@ import { Box, Divider, Flex, Text, Title, Tooltip } from '@mantine/core'
 import Link from 'next/link'
 import Velocity from '../components/Animation/TestVelocityCompo/Velocity'
 import { motion } from 'framer-motion'
-import TextHoverImg from '@/components/TextHoverImg'
 
 export default function Page() {
   return (
@@ -17,9 +16,9 @@ export default function Page() {
         className="w-full lg:h-[60vh] pt-14 lg:pt-60 block border-b border-blue-400 rounded-full"
       >
         <Flex justify="center" align="center" gap="xl">
-          <TextHoverImg>
-            <Text className="text-[48px] font-semibold">Who Am</Text>
-          </TextHoverImg>
+          {/* <TextHoverImg> */}
+          <Text className="text-[48px] font-semibold">Who Am</Text>
+          {/* </TextHoverImg> */}
           <Flex justify="space-between" align="center">
             <Tooltip
               className="hidden lg:block"
