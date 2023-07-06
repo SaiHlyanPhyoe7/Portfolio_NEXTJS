@@ -35,7 +35,7 @@ export default function Page() {
                 <Image
                   className="lg:w-fit rounded rounded-tr-[40px] static h-fit"
                   src={data.img}
-                  alt="photo"
+                  alt={data.title}
                 />
                 <Flex justify="space-between" align="center">
                   <Flex justify="start" align="center" gap="md">
