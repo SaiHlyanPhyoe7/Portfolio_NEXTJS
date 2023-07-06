@@ -10,11 +10,23 @@ import secondPortfolioDarkmode from '../../assets/img/ProjectImg/secondPortfolio
 import socialMediaEcommerce from '../../assets/img/ProjectImg/socialMediaEcommerce.png'
 import socialMediaFriends from '../../assets/img/ProjectImg/socialMediaFriends.png'
 import socialMediaHome from '../../assets/img/ProjectImg/socialMediaHome.png'
+import pokemon from '../../assets/img/ProjectImg/pokemon.png'
 import socialMediaMyProfile from '../../assets/img/ProjectImg/socialMediaMyProfile.png'
 import viteFoodie from '../../assets/img/ProjectImg/foodie.png'
 import cryptoWeb from '../../assets/img/ProjectImg/cryptoWeb.png'
 
 export const projectCard = [
+  {
+    id: 15,
+    img: pokemon,
+    rating: 5,
+    price: '500$',
+    title: 'Ecommerce Pokemon',
+    para: 'This is Pokemon ecommerce with Add to card feature.',
+    techStack: ['NextJs', 'Tailwind', 'Redux Toolkit', 'Serverside Fetch'],
+    link: 'https://take-home-assign.vercel.app/',
+    likes: 400
+  },
   {
     id: 1,
     img: socialMediaHome,
