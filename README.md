@@ -1,38 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sai Hlyan Phyoe Portfolio
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Welcome to My Portfolio, the personal website of a Fullstack Developer with expertise in React. This project is built using Next.js, Mantine UI, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experiences.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+As a Fullstack Developer, I have a passion for creating innovative web applications and solutions. This portfolio serves as a platform to demonstrate my proficiency in various technologies and share my journey as a developer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: The project is built with Next.js, a powerful React framework that enables server-side rendering, routing, and a great developer experience.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **Mantine UI**: Mantine UI is used for creating elegant and functional UI components. It provides a wide range of customizable components to ensure a visually appealing and user-friendly design.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Tailwind CSS**: Tailwind CSS is utilized for styling, making it easy to maintain and customize the project's appearance. It follows a utility-first approach, which helps in creating responsive and efficient designs.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Framer Motion**: Framer Motion is used to add animations and transitions, enhancing the user experience by adding a touch of interactivity and flair to the website.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone this repository to your local machine:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/SaiHlyanPhyoe7/Portfolio_NEXTJS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   cd Portfolio_NEXTJS
 
-## Deploy on Vercel
+   # Package Install
+   npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   # Run the project
+   $ npm run dev
+   ```
