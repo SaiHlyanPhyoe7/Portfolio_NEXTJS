@@ -1,6 +1,6 @@
 # Sai Hlyan Phyoe's Portfolio
 
-## Introduction
+## Introduction of the project
 
 Welcome to My Portfolio, the personal website of a Fullstack Developer with expertise in React. This project is built using Next.js, Mantine UI, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experiences.
 
