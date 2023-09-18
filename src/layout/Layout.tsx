@@ -5,6 +5,8 @@ import { Box, Affix, Transition, rem } from '@mantine/core'
 import { IconArrowUp } from '@tabler/icons-react'
 import { useWindowScroll } from '@mantine/hooks'
 import { useRouter } from 'next/router'
+import { LayoutFooter } from '@/components/Footer/LayoutFooter'
+import cn from '@/constants/ClassNames'
 
 export function Layout({ children }: TChild) {
   const [scroll, scrollTo] = useWindowScroll()
@@ -45,9 +47,11 @@ export function Layout({ children }: TChild) {
             )}
           </Transition>
         </Affix>
-        {/* <Box className="bg-indigo-300 fixed left-0 bottom-0 w-screen py-4">
+        <Box
+          className={cn('bg-indigo-300 fixed left-0 bottom-0 w-screen py-4')}
+        >
           <LayoutFooter />
-        </Box> */}
+        </Box>
       </Box>
     </Box>
   )
