@@ -33,6 +33,7 @@
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@use-gesture/react": "^10.2.25",
+    "clsx": "^2.0.0",
     "dayjs": "^1.11.7",
     "embla-carousel-react": "^7.1.0",
     "eslint-config-next": "13.2.4",
@@ -44,6 +45,7 @@
     "react-animated-cursor": "^2.5.2",
     "react-dom": "18.2.0",
     "react-use-measure": "^2.1.1",
+    "tw-merge": "^0.0.1-alpha.3",
     "typewriter-effect": "^2.19.0",
     "zod": "^3.21.4"
   },
