@@ -30,4 +30,9 @@ As a Fullstack Developer, I have a passion for creating innovative web applicati
 
    # Run the project
    $ npm run dev
+
+   # To fix eslint error
+   $ npm run lint:fix
    ```
+
+2. Feel Free to make any suggestion in the discussion section.

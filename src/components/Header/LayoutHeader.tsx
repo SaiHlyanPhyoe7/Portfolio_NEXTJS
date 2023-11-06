@@ -30,7 +30,7 @@ export function LayoutHeader() {
               </Link>
             </Tooltip>
           </Box>
-          <Tooltip className="hidden lg:block" label=<Text>Click Me</Text>>
+          <Tooltip className="hidden lg:block" label=<Text>goto github?</Text>>
             <Link
               target="_blank"
               href={'https://github.com/SaiHlyanPhyoe7?tab=repositories'}
