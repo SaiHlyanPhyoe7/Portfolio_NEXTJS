@@ -23,6 +23,11 @@ As a Fullstack Developer, I have a passion for creating innovative web applicati
    ```bash
    git clone https://github.com/SaiHlyanPhyoe7/Portfolio_NEXTJS
 
+   ```
+
+   To Run with npm
+
+   ```bash
    cd Portfolio_NEXTJS
 
    # Package Install
@@ -35,4 +40,16 @@ As a Fullstack Developer, I have a passion for creating innovative web applicati
    $ npm run lint:fix
    ```
 
-2. Feel Free to make any suggestion in the discussion section.
+   To Run With Docker
+
+   ```bash
+   #Build the image
+   docker image build -t dockerapp:v0 .
+
+   #To run the docker container
+   docker run -dp 3000:3000 --name portfolioDockerContainer dockerapp:v0
+   ```
+
+```
+Feel Free to make any suggestion in the discussion section.
+```
