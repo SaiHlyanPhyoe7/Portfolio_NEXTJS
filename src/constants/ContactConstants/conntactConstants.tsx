@@ -10,7 +10,7 @@ import {
 export const contactInfo = [
   {
     icon: <IconPhone className="text-orange-400" />,
-    desc: '09263141207'
+    desc: '+66928548586'
   },
   {
     icon: <IconMail className="text-orange-400" />,
@@ -18,7 +18,7 @@ export const contactInfo = [
   },
   {
     icon: <IconMapPin className="text-orange-400" />,
-    desc: 'South Horse Race Course Road,Tamwe Township, Yangon'
+    desc: 'Thailand, Bangkok 10240, Bang Kapi, Khlong Chan'
   }
 ]
 export const socialContactInfoLogo = [
